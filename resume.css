@@ -31,7 +31,9 @@ h3 {
 
 p, div.section {
     padding-left: 4em;
-    padding-right: 4em;
+    padding-right: 2em;
+}
+p {
     text-align: justify;
 }
 
@@ -50,4 +52,24 @@ div.section ul.primary {
     padding-top: 1em;
     padding-left: 2em;
     padding-right: 2em;
+}
+
+ul ul {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0.5em;
+}
+
+p#footer {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+span.duration {
+    font-size: 80%;
+    font-variant: small-caps;
+    font-style: italic;
 }
