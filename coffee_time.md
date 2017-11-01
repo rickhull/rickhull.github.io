@@ -9,7 +9,7 @@ Coffee time! I'm ready to drink my coffee!
 At em boys! The day has begun!
 
 Coffee time! It is the time for coffee!
-Coffee time, into the morn
+Send me off, into the morn
 We toil away, we sieze the day,
 We can't fall asleep until the next horn!
 ```
