@@ -1,5 +1,7 @@
-#!/bin/sh -euf
+#!/bin/sh
 
-set -o pipefail
+set -o errexit   # abort an any nonzero exitstatus
+set -o nounset   # abort on unbound variable
+set -o pipefail  # abort if earlier pipeline command fails
 
-wkhtmltopdf https://rickhull.github.io/resume resume.pdf
+wkhtmltopdf --allow docs docs/resume.html docs/resume.pdf
