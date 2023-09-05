@@ -14,8 +14,9 @@
           devShell = pkgs.mkShell {
             nativeBuildInputs = [ pkgs.bashInteractive ];
             buildInputs = [
-              pkgs.wkhtmltopdf
-              # pkgs.fontconfig
+              pkgs.pandoc
+              pkgs.fontconfig
+	      pkgs.texlive.combined.scheme-medium
             ];
           };
         }
