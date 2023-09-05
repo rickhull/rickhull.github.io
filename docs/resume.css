@@ -29,10 +29,16 @@ h3 {
     margin-bottom: 0;
 }
 
-p, div.section {
+p div.section {
     padding-left: 4em;
     padding-right: 2em;
 }
+
+div.section {
+    page-break-before: always;
+    break-before: always;
+}
+
 p {
     text-align: justify;
 }
