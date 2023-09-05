@@ -4,4 +4,4 @@ set -o errexit   # abort an any nonzero exitstatus
 set -o nounset   # abort on unbound variable
 set -o pipefail  # abort if earlier pipeline command fails
 
-pandoc docs/resume.html -t latex -o docs/resume.pdf
+pandoc docs/resume.html -o docs/resume.pdf --css docs/resume.css
