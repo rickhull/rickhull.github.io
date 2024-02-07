@@ -18,6 +18,7 @@ pandoc \
 pandoc \
     --output docs/resume.html \
     --standalone \
+    --quiet \
     docs/resume.md
 
 #    --metadata title="Rick Hull, Software Engineer" \
