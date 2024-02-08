@@ -13,9 +13,20 @@ echo "wrote docs/resume.html"
 
 pandoc \
     --output docs/resume.pdf \
-    -V margin-top=2cm \
-    -V margin-bottom=2cm \
+    -V margin-top=3cm \
+    -V margin-bottom=3cm \
     -V margin-left=4cm \
     -V margin-right=4cm \
     docs/resume.md
 echo "wrote docs/resume.pdf"
+
+#pandoc \
+#    --output docs/resume.tex \
+#    --standalone \
+#    -V fontfamily=cm \
+#    -V margin-top=2cm \
+#    -V margin-bottom=2cm \
+#    -V margin-left=4cm \
+#    -V margin-right=4cm \
+#    docs/resume.md
+#echo "wrote docs/resume.tex"
