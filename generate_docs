@@ -4,8 +4,13 @@ set -o errexit   # abort an any nonzero exitstatus
 set -o nounset   # abort on unbound variable
 set -o pipefail  # abort if earlier pipeline command fails
 
-# using docs/resume.md as input
-# generate docs/resume.pdf
+pandoc \
+    --output docs/resume.html \
+    --standalone \
+    --quiet \
+    docs/resume.md
+echo "wrote docs/resume.html"
+
 pandoc \
     --output docs/resume.pdf \
     -V margin-top=2cm \
@@ -13,35 +18,4 @@ pandoc \
     -V margin-left=4cm \
     -V margin-right=4cm \
     docs/resume.md
-
-# now generate docs/resume.html
-pandoc \
-    --output docs/resume.html \
-    --standalone \
-    --quiet \
-    docs/resume.md
-
-#    --metadata title="Rick Hull, Software Engineer" \
-#    --shift-heading-level-by=-1 \
-
-
-# using docs/resume.html as input
-#pandoc \
-#    --output docs/resume.pdf \
-#    --css docs/resume.css \
-#    docs/resume.html
-
-
-# looks good with html input
-#    -V geometry:scale=0.8 \
-
-# looks good too
-#    --shift-heading-level-by=-1 \
-#    -V geometry:margin=2cm \
-#    -V geometry:top=2cm \
-#    -V geometry:left=4cm \
-#    -V geometry:right=4cm \
-#    -V geometry:bottom=2cm \
-
-# no apparent effect
-#    -V indent=true \
+echo "wrote docs/resume.pdf"
