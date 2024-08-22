@@ -128,12 +128,11 @@ library and API development, and other forms of back-end programming.
 
 #### Tech
 
-* Hashicorp, Chef, Ansible, SaltStack, Jenkins
 * TCP network programming, clients and servers
+* Hashicorp, Chef, Ansible, SaltStack, Jenkins
 * Redis, PostgreSQL, MySQL
-* AWS and Rackspace cloud automation
+* AWS and Rackspace cloud automation, OpenStack ecosystem
 * JVM ecosystem
-* OpenStack ecosystem
 
 ### System Administration
 
