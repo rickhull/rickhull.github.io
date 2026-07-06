@@ -4,21 +4,23 @@ set -o errexit   # abort an any nonzero exitstatus
 set -o nounset   # abort on unbound variable
 set -o pipefail  # abort if earlier pipeline command fails
 
-pandoc \
-    --output docs/resume.html \
-    --standalone \
-    --quiet \
-    docs/resume.md
-echo "wrote docs/resume.html"
+for basename in resume operations; do
+    pandoc \
+        --output "docs/${basename}.html" \
+        --standalone \
+        --quiet \
+        "docs/${basename}.md"
+    echo "wrote docs/${basename}.html"
 
-pandoc \
-    --output docs/resume.pdf \
-    -V margin-top=3cm \
-    -V margin-bottom=3cm \
-    -V margin-left=4cm \
-    -V margin-right=4cm \
-    docs/resume.md
-echo "wrote docs/resume.pdf"
+    pandoc \
+        --output "docs/${basename}.pdf" \
+        -V margin-top=3cm \
+        -V margin-bottom=3cm \
+        -V margin-left=4cm \
+        -V margin-right=4cm \
+        "docs/${basename}.md"
+    echo "wrote docs/${basename}.pdf"
+done
 
 #pandoc \
 #    --output docs/resume.tex \
